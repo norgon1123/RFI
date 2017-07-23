@@ -680,7 +680,7 @@ public class Seeker : MonoBehaviour, ISerializationCallbackReceiver {
         {
             if (i == endPos-1)
             {
-				drawnPath[i].GetComponent<Renderer>().material.color = Color.magenta;
+				drawnPath[i].GetComponent<Renderer>().material.color = Color.yellow;
             }
             else
             {
@@ -702,7 +702,7 @@ public class Seeker : MonoBehaviour, ISerializationCallbackReceiver {
         {
             if (point == currentWaypoint)
             {
-				point.GetComponent<Renderer>().material.color = Color.magenta;
+				point.GetComponent<Renderer>().material.color = Color.yellow;
             }
             else
             {
