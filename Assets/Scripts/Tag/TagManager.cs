@@ -262,7 +262,14 @@ public class TagManager : MonoBehaviour, IInputClickHandler {
 			tagList.Add (_tagName, _tag);
 			GetComponent<AudioSource> ().transform.position = Camera.main.transform.position;
 			GetComponent<AudioSource> ().Play ();
-			ShowTag(_tag);
+			GameObject tagDisplay = ShowTag(_tag);
+
+            if (_tagName == "RFI")
+            {
+                tagDisplay.GetComponent<TextToSpeechManager>().enabled = true;
+                tagDisplay.GetComponent<TextToSpeechOnGaze>().enabled = true;
+                tagDisplay.GetComponent<ChangeName>().enabled = true;
+            }
 		}
 	}
 
@@ -375,7 +382,7 @@ public class TagManager : MonoBehaviour, IInputClickHandler {
 	/// Show specific tag
 	/// </summary>
 	/// <param name="selectedTag">Selected tag.</param>
-	public void ShowTag(GameObject selectedTag)
+	public GameObject ShowTag(GameObject selectedTag)
 	{
 		if (tagList.Count > 0)
 		{
@@ -422,9 +429,11 @@ public class TagManager : MonoBehaviour, IInputClickHandler {
                         }
                     }
 					tagDisplays.Add (_tagDisplay);
+                    return _tagDisplay;
 				}
 			}
 		}
+        return null;
 	}
 
 	/// <summary>

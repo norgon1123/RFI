@@ -42,6 +42,9 @@ GameObject:
   - component: {fileID: 23853643611024260}
   - component: {fileID: 82824137196466186}
   - component: {fileID: 114004214295380178}
+  - component: {fileID: 114406968158821152}
+  - component: {fileID: 114934760122965054}
+  - component: {fileID: 114006816557407416}
   m_Layer: 9
   m_Name: Tag Display
   m_TagString: Tag
@@ -357,6 +360,32 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GazeMaterial: {fileID: 2100000, guid: f58d2b94119122844b39ddf622003c3a, type: 2}
   NormalMaterial: {fileID: 2100000, guid: f84f0a2f32121be43b3c2aa2ca054976, type: 2}
+--- !u!114 &114006816557407416
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1783139642177330}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f556894c7ea23e4f883efe66df77d03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OriginalName: RFI
+  NewName: Ceiling assembly location off by 3". How to proceed?
+--- !u!114 &114406968158821152
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1783139642177330}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca6f3b91ea1f9634db308846d1cdfb7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSource: {fileID: 82824137196466186}
+  voice: 0
 --- !u!114 &114844376348189892
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -369,6 +398,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PivotAxis: 0
+--- !u!114 &114934760122965054
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1783139642177330}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dde62642141fd3b45884effdf9b04f3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textToSpeechManager: {fileID: 114406968158821152}
 --- !u!114 &114964366492372032
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -31,7 +31,6 @@ public class Discover : MonoBehaviour
     private bool exploring;
     private bool ceiling;
     private bool floor;
-    private bool created;
 
     private GameObject _circleObj;
     private GameObject focusedObject;
@@ -46,7 +45,6 @@ public class Discover : MonoBehaviour
     void Start()
     {
         hasData = false;
-        created = false;
         exploring = true;
         ceiling = false;
         floor = false;
@@ -60,9 +58,6 @@ public class Discover : MonoBehaviour
         gazeManager = GazeManager.Instance;
 
         spatialNavLayer = LayerMask.NameToLayer("SpatialMapping");
-
-        //		string path = SoundManager.Instance.LookupSound ("click");
-        //		GetComponent<AudioSource> ().clip = Resources.Load<AudioClip> (path);
 
         if (Instance == null)
         {

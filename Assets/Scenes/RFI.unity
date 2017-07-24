@@ -1825,7 +1825,7 @@ Prefab:
     - target: {fileID: 114951691357224108, guid: 265a2095ad5a38d428c84b2d3aab8933,
         type: 2}
       propertyPath: KeywordsAndResponses.Array.data[34].Keyword
-      value: Tag Bathroom
+      value: Tag R F I
       objectReference: {fileID: 0}
     - target: {fileID: 114951691357224108, guid: 265a2095ad5a38d428c84b2d3aab8933,
         type: 2}
@@ -1850,7 +1850,7 @@ Prefab:
     - target: {fileID: 114951691357224108, guid: 265a2095ad5a38d428c84b2d3aab8933,
         type: 2}
       propertyPath: KeywordsAndResponses.Array.data[34].Response.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: bathroom
+      value: RFI
       objectReference: {fileID: 0}
     - target: {fileID: 114951691357224108, guid: 265a2095ad5a38d428c84b2d3aab8933,
         type: 2}
@@ -1866,7 +1866,7 @@ Prefab:
     - target: {fileID: 114951691357224108, guid: 265a2095ad5a38d428c84b2d3aab8933,
         type: 2}
       propertyPath: KeywordsAndResponses.Array.data[35].Keyword
-      value: Navigate to bathroom
+      value: Navigate to R F I
       objectReference: {fileID: 0}
     - target: {fileID: 114951691357224108, guid: 265a2095ad5a38d428c84b2d3aab8933,
         type: 2}
@@ -1891,7 +1891,7 @@ Prefab:
     - target: {fileID: 114951691357224108, guid: 265a2095ad5a38d428c84b2d3aab8933,
         type: 2}
       propertyPath: KeywordsAndResponses.Array.data[35].Response.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: bathroom
+      value: RFI
       objectReference: {fileID: 0}
     - target: {fileID: 114951691357224108, guid: 265a2095ad5a38d428c84b2d3aab8933,
         type: 2}
@@ -4447,7 +4447,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!82 &2029513431
 AudioSource:
   m_ObjectHideFlags: 0
