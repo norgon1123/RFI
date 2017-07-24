@@ -68,7 +68,6 @@ public class TagManager : MonoBehaviour, IInputClickHandler {
 
     private void Start()
 	{
-		InputManager.Instance.PushFallbackInputHandler(gameObject);
 		tagging = false;
 		tagList = new Dictionary<string, GameObject>();
 		tagDisplays = new List<GameObject> ();
@@ -181,14 +180,9 @@ public class TagManager : MonoBehaviour, IInputClickHandler {
 			tagList.Add(_tagName, _tag);
             SaveAnchor(_tag, _tagName);
 
-			if (Discover.Instance.Exploring)
-			{
-				ShowTag(_tag);
-			}
+			ShowTag(_tag);
 		}
 		DestroyDiction();
-
-		CollisionDetection.Instance.RevertStatus ();
 	}
 
 	/// <summary>
@@ -237,10 +231,7 @@ public class TagManager : MonoBehaviour, IInputClickHandler {
             SaveAnchor(_tag, _tagName);
             GetComponent<AudioSource> ().transform.position = Camera.main.transform.position;
 			GetComponent<AudioSource> ().Play ();
-			if (Discover.Instance.Exploring)
-			{
-				ShowTag(_tag);
-			}
+			ShowTag(_tag);
 		}
 		else
 		{
@@ -268,10 +259,7 @@ public class TagManager : MonoBehaviour, IInputClickHandler {
 			tagList.Add (_tagName, _tag);
 			GetComponent<AudioSource> ().transform.position = Camera.main.transform.position;
 			GetComponent<AudioSource> ().Play ();
-			if (Discover.Instance.Exploring)
-			{
-				ShowTag(_tag);
-			}
+			ShowTag(_tag);
 		}
 	}
 
@@ -291,20 +279,14 @@ public class TagManager : MonoBehaviour, IInputClickHandler {
 		{
 			tagList.Add (_tagName, _tag);
             SaveAnchor(_tag, _tagName);
-            if (Discover.Instance.Exploring)
-			{
-				ShowTag(_tag);
-			}
+			ShowTag(_tag);
 		}
 		else
 		{
 			tagList.Remove (_tagName);
 			tagList.Add (_tagName, _tag);
             SaveAnchor(_tag, _tagName);
-            if (Discover.Instance.Exploring)
-			{
-				ShowTag(_tag);
-			}
+			ShowTag(_tag);
 		}
 	}
 
@@ -350,19 +332,6 @@ public class TagManager : MonoBehaviour, IInputClickHandler {
 							tagName.GetComponent<TextMesh>().text += tagList[i];
 						}
 					}
-
-                    // Display extra tags
-					//for (int i=5; i<tagList.Length; i++)
-					//{
-					//	if (i<tagList.Length-1)
-					//	{
-					//		otherTags.GetComponent<TextMesh>().text += tagList[i] + ", ";
-					//	}
-					//	else
-					//	{
-					//		otherTags.GetComponent<TextMesh>().text += tagList[i];
-					//	}
-					//}
 				}
 				else
 				{
@@ -435,20 +404,6 @@ public class TagManager : MonoBehaviour, IInputClickHandler {
                             }
                         }
                     }
-
-                    // Display extra tags
-                    //	for (int i=5; i<tagList.Length; i++)
-                    //	{
-                    //		if (i<tagList.Length-1)
-                    //		{
-                    //			otherTags.GetComponent<TextMesh>().text += tagList[i] + ", ";
-                    //		}
-                    //		else
-                    //		{
-                    //			otherTags.GetComponent<TextMesh>().text += tagList[i];
-                    //		}
-                    //	}
-                    //}
                     else
                     {
                         for (int i = 0; i < tagList.Length; i++)

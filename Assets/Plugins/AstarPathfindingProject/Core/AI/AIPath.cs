@@ -379,18 +379,11 @@ public class AIPath : MonoBehaviour
         seeker.DeleteWaypoints();
         seeker.DrawPath();
 
-        audioPos = Camera.main.transform.position;
-
-        audioSource.clip = waypoint;
-        audioSource.loop = true;
-        audioSource.volume = .6f;
-
         if (seeker.WaypointList.Count > 0)
         {
             seeker.PathIndex = 0;
             seeker.WaypointIndex = 0;
             pathComplete = true;
-            StartCube.Invoke();
         }
         else
         {
@@ -453,11 +446,6 @@ public class AIPath : MonoBehaviour
 				pathComplete = false;
 				seeker.DeletePath ();
 				seeker.DeleteWaypoints ();
-				audioSource.volume = 0.6f;
-				audioSource.clip = pathFinished;
-				audioSource.loop = false;
-				CollisoinDetection.Invoke ();
-				RemoveTags.Invoke ();
 			}
 			// True when the user steps away from the path
 			else if (seeker.ExitNavigation ())
@@ -465,24 +453,7 @@ public class AIPath : MonoBehaviour
 				pathComplete = false;
 				seeker.DeletePath ();
 				seeker.DeleteWaypoints ();
-				audioSource.volume = 1;
-				audioSource.clip = pathAbandoned;
-				audioSource.loop = false;
-				CollisoinDetection.Invoke ();
-				RemoveTags.Invoke ();
 			}
-
-            // Only move audio source if the user is moving along the path
-            else if (audioPos != audioSourceContainer.transform.position)
-            {
-                audioSourceContainer.transform.position = audioPos;
-            }
-
-            // Start the audio source if the navigation is just starting, after it has been placed
-            if (!audioSource.isPlaying)
-            {
-                audioSource.Play();
-            }
         }
 
         // Stop the audio source when the user is finished navigating along the path
