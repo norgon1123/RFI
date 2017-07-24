@@ -86,4 +86,37 @@ public class CreateOnTap : MonoBehaviour, IInputClickHandler
         InputManager.Instance.PopFallbackInputHandler();
         InputManager.Instance.PushFallbackInputHandler(TagManager.Instance.gameObject);
     }
+
+    /// <summary>
+    /// Toggle placeability of object
+    /// </summary>
+    public void Lock()
+    {
+        if (ObjectToBeCreated != null)
+        {
+            ObjectToBeCreated.GetComponent<TapToPlace>().Lock();
+        }
+    }
+
+    /// <summary>
+    /// Place duct at gaze position if anchor load position needs
+    /// to be reset
+    /// </summary>
+    public void PlaceHere()
+    {
+        Vector3 pos = GazeManager.Instance.HitPosition;
+        pos.y += 2f;
+        ObjectToBeCreated.transform.position = pos;
+
+        // Rotate this object to face the user.
+        Quaternion toQuat = Camera.main.transform.localRotation;
+        toQuat.x = 0;
+        toQuat.z = 0;
+        gameObject.transform.rotation = toQuat;
+
+        ObjectToBeCreated.gameObject.SetActive(true);
+
+        InputManager.Instance.PopFallbackInputHandler();
+        InputManager.Instance.PushFallbackInputHandler(TagManager.Instance.gameObject);
+    }
 }

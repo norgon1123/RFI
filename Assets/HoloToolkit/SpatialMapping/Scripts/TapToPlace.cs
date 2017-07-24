@@ -47,6 +47,8 @@ namespace HoloToolkit.Unity.SpatialMapping
         /// </summary>
         protected SpatialMappingManager spatialMappingManager;
 
+        private bool locked;
+
         protected virtual void Start()
         {
             // Make sure we have all the components in the scene we need.
@@ -81,6 +83,7 @@ namespace HoloToolkit.Unity.SpatialMapping
 
                 DetermineParent();
             }
+            locked = false;
         }
 
         protected virtual void Update()
@@ -117,7 +120,7 @@ namespace HoloToolkit.Unity.SpatialMapping
                     else
                     {
                         Vector3 pos = hitInfo.point;
-                        pos.y += 2f;
+                        //pos.y += Camera.main.transform.position.y + 1;
                         gameObject.transform.position = pos;
                         gameObject.transform.rotation = toQuat;
                     }
@@ -127,6 +130,9 @@ namespace HoloToolkit.Unity.SpatialMapping
 
         public virtual void OnInputClicked(InputClickedEventData eventData)
         {
+            if (locked)
+            { return; }
+
             // On each tap gesture, toggle whether the user is in placing mode.
             IsBeingPlaced = !IsBeingPlaced;
 
@@ -163,6 +169,14 @@ namespace HoloToolkit.Unity.SpatialMapping
                     ParentGameObjectToPlace = gameObject.transform.parent.gameObject;
                 }
             }
+        }
+
+        /// <summary>
+        /// Toggle lock object in place
+        /// </summary>
+        public void Lock()
+        {
+            locked = !locked;
         }
     }
 }
