@@ -372,7 +372,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   OriginalName: RFI
-  NewName: Ceiling assembly location off by 3". How to proceed?
+  NewName: Ceiling assembly location off by 3 inches. How to proceed?
 --- !u!114 &114406968158821152
 MonoBehaviour:
   m_ObjectHideFlags: 1

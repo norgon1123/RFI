@@ -104,9 +104,7 @@ public class CreateOnTap : MonoBehaviour, IInputClickHandler
     /// </summary>
     public void PlaceHere()
     {
-        Vector3 pos = GazeManager.Instance.HitPosition;
-        pos.y += 2f;
-        ObjectToBeCreated.transform.position = pos;
+        ObjectToBeCreated.transform.position = GazeManager.Instance.HitPosition;
 
         // Rotate this object to face the user.
         Quaternion toQuat = Camera.main.transform.localRotation;
