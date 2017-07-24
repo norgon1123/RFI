@@ -241,12 +241,12 @@ public class TagManager : MonoBehaviour, IInputClickHandler {
 			GameObject oldTag;
 
 			// Destroy old tag in dictionary
-			if (tagList.TryGetValue(name, out oldTag))
+			if (tagList.TryGetValue(_tagName, out oldTag))
 			{
 				// Destroy old Tag Display
 				foreach (GameObject tag in tagDisplays)
 				{
-					if (name == tag.transform.FindChild("Tag Name").gameObject.GetComponent<TextMesh>().text)
+					if (_tagName == tag.transform.FindChild("Tag Name").gameObject.GetComponent<TextMesh>().text)
 					{
 						tagDisplays.Remove(tag);
 						Destroy(tag);
