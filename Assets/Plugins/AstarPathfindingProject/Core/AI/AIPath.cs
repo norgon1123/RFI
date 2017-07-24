@@ -503,8 +503,7 @@ public class AIPath : MonoBehaviour
 		audioSource.volume = 0.6f;
 		audioSource.clip = pathFinished;
 		audioSource.loop = false;
-		CollisoinDetection.Invoke ();
-		RemoveTags.Invoke ();
+        audioSource.Play();
 	}
 
     /** Point to where the AI is heading.

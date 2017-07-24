@@ -94,7 +94,7 @@ public class CreateOnTap : MonoBehaviour, IInputClickHandler
     {
         if (ObjectToBeCreated != null)
         {
-            ObjectToBeCreated.GetComponent<TapToPlace>().Lock();
+            ObjectToBeCreated.GetComponent<TapToPlace>().enabled = !ObjectToBeCreated.GetComponent<TapToPlace>().enabled;
         }
     }
 
