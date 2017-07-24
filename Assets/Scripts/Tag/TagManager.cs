@@ -98,10 +98,13 @@ public class TagManager : MonoBehaviour, IInputClickHandler {
 
             foreach (var id in ids)
             {
-                var instance = Instantiate(Tag);
-                var anchor = store.Load(id, instance);
-                instance.transform.position = anchor.transform.position;
-                tagList.Add(id, instance);
+                if (id != "duct1")
+                {
+                    var instance = Instantiate(Tag);
+                    var anchor = store.Load(id, instance);
+                    instance.transform.position = anchor.transform.position;
+                    tagList.Add(id, instance);
+                }
             }
         }
     }
