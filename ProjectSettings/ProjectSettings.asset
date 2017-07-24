@@ -10,8 +10,8 @@ PlayerSettings:
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
-  companyName: DefaultCompany
-  productName: AugSense
+  companyName: AugSense
+  productName: RFI
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13333334, g: 0.17254902, b: 0.21176471, a: 1}
@@ -389,7 +389,7 @@ PlayerSettings:
   metroCertificateSubject: DefaultCompany
   metroCertificateIssuer: DefaultCompany
   metroCertificateNotAfter: 0069c7a06b48d301
-  metroApplicationDescription: AugSense
+  metroApplicationDescription: RFI
   wsaImages: {}
   metroTileShortName: RFI
   metroCommandLineArgsFile: 
