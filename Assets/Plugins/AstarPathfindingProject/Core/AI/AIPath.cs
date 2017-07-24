@@ -443,17 +443,25 @@ public class AIPath : MonoBehaviour
             // Stop audio source and delete path if the user has reached the end
             // Possibly inefficient to check this Vector3
 			if (seeker.CurrentAudioPos == new Vector3 (999, 999, 999)) {
-				pathComplete = false;
-				seeker.DeletePath ();
-				seeker.DeleteWaypoints ();
-			}
+                pathComplete = false;
+                seeker.DeletePath();
+                seeker.DeleteWaypoints();
+                audioSource.volume = 0.6f;
+                audioSource.clip = pathFinished;
+                audioSource.Play();
+                audioSource.loop = false;
+            }
 			// True when the user steps away from the path
 			else if (seeker.ExitNavigation ())
 			{
-				pathComplete = false;
-				seeker.DeletePath ();
-				seeker.DeleteWaypoints ();
-			}
+                pathComplete = false;
+                seeker.DeletePath();
+                seeker.DeleteWaypoints();
+                audioSource.volume = 1;
+                audioSource.clip = pathAbandoned;
+                audioSource.Play();
+                audioSource.loop = false;
+            }
         }
 
         // Stop the audio source when the user is finished navigating along the path
