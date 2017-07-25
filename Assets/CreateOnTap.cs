@@ -72,7 +72,6 @@ public class CreateOnTap : MonoBehaviour, IInputClickHandler
     public virtual void OnInputClicked(InputClickedEventData eventData)
     {
         Vector3 pos = GazeManager.Instance.HitPosition;
-        pos.y += 2f;
         ObjectToBeCreated.transform.position = pos;
 
         // Rotate this object to face the user.

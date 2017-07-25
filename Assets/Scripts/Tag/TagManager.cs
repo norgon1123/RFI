@@ -234,7 +234,6 @@ public class TagManager : MonoBehaviour, IInputClickHandler {
             SaveAnchor(_tag, _tagName);
             GetComponent<AudioSource> ().transform.position = Camera.main.transform.position;
 			GetComponent<AudioSource> ().Play ();
-			ShowTag(_tag);
 		}
 		else
 		{
@@ -262,16 +261,16 @@ public class TagManager : MonoBehaviour, IInputClickHandler {
 			tagList.Add (_tagName, _tag);
 			GetComponent<AudioSource> ().transform.position = Camera.main.transform.position;
 			GetComponent<AudioSource> ().Play ();
-			GameObject tagDisplay = ShowTag(_tag);
-
-            if (_tagName == "RFI")
-            {
-                tagDisplay.GetComponent<TextToSpeechManager>().enabled = true;
-                tagDisplay.GetComponent<TextToSpeechOnGaze>().enabled = true;
-                tagDisplay.GetComponent<ChangeName>().enabled = true;
-            }
 		}
-	}
+
+        GameObject tagDisplay = ShowTag(_tag);
+        if (_tagName == "RFI")
+        {
+            tagDisplay.GetComponent<TextToSpeechManager>().enabled = true;
+            tagDisplay.GetComponent<TextToSpeechOnGaze>().enabled = true;
+            tagDisplay.GetComponent<ChangeName>().enabled = true;
+        }
+    }
 
 	/// <summary>
 	/// Adds tag from cognitive API
