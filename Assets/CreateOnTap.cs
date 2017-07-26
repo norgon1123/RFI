@@ -103,17 +103,6 @@ public class CreateOnTap : MonoBehaviour, IInputClickHandler
     /// </summary>
     public void PlaceHere()
     {
-        ObjectToBeCreated.transform.position = GazeManager.Instance.HitPosition;
-
-        // Rotate this object to face the user.
-        Quaternion toQuat = Camera.main.transform.localRotation;
-        toQuat.x = 0;
-        toQuat.z = 0;
-        gameObject.transform.rotation = toQuat;
-
-        ObjectToBeCreated.gameObject.SetActive(true);
-
-        InputManager.Instance.PopFallbackInputHandler();
-        InputManager.Instance.PushFallbackInputHandler(TagManager.Instance.gameObject);
+        ObjectToBeCreated.GetComponent<TapToPlace>().PlaceWithVoiceCommand();
     }
 }

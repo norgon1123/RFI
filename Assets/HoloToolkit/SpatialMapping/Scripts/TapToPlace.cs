@@ -148,6 +148,29 @@ namespace HoloToolkit.Unity.SpatialMapping
             }
         }
 
+        public void PlaceWithVoiceCommand()
+        {
+            // On each tap gesture, toggle whether the user is in placing mode.
+            IsBeingPlaced = !IsBeingPlaced;
+
+            // If the user is in placing mode, display the spatial mapping mesh.
+            if (IsBeingPlaced)
+            {
+                spatialMappingManager.DrawVisualMeshes = true;
+
+                Debug.Log(gameObject.name + " : Removing existing world anchor if any.");
+
+                anchorManager.RemoveAnchor(gameObject);
+            }
+            // If the user is not in placing mode, hide the spatial mapping mesh.
+            else
+            {
+                spatialMappingManager.DrawVisualMeshes = false;
+                // Add world anchor when object placement is done.
+                anchorManager.AttachAnchor(gameObject, SavedAnchorFriendlyName);
+            }
+        }
+
         private void DetermineParent()
         {
             if (ParentGameObjectToPlace == null)
