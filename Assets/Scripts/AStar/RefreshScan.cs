@@ -81,10 +81,10 @@ public class RefreshScan : MonoBehaviour
 
         lastScanTime = Time.time;
 
-        if (!scanRoutine)
-        {
-            StartCoroutine(scan);
-        }
+        //if (!scanRoutine)
+        //{
+        //    StartCoroutine(scan);
+        //}
     }
 
     private IEnumerator ScanGrid()

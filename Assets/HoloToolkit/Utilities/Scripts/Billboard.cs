@@ -11,8 +11,8 @@ namespace HoloToolkit.Unity
         Free,
         // Rotate about an individual axis.
         Y,
-        // Rotate about an individual axis.
-        Z
+        // Rotate to face user
+        FaceUser
     }
 
     /// <summary>
@@ -50,9 +50,6 @@ namespace HoloToolkit.Unity
                 case PivotAxis.Y:
                     directionToTarget.y = 0.0f;
                     break;
-                case PivotAxis.Z:
-                    directionToTarget.z = 180;
-                    break;
                 case PivotAxis.Free:
                 default:
                     // No changes needed.
@@ -62,6 +59,13 @@ namespace HoloToolkit.Unity
             // If we are right next to the camera the rotation is undefined. 
             if (directionToTarget.sqrMagnitude < 0.001f)
             {
+                return;
+            }
+
+            if (PivotAxis == PivotAxis.FaceUser)
+            {
+                directionToTarget.y = 0.0f;
+                transform.rotation = Quaternion.LookRotation(directionToTarget);
                 return;
             }
 

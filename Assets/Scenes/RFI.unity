@@ -3359,11 +3359,11 @@ Prefab:
     - target: {fileID: 114815575134298240, guid: 268568d31a028514ebaaf6780aa4c9f6,
         type: 2}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4500254741202306, guid: 268568d31a028514ebaaf6780aa4c9f6, type: 2}
       propertyPath: m_LocalScale.z
-      value: 1.640714
+      value: 0.00001
       objectReference: {fileID: 0}
     - target: {fileID: 4500254741202306, guid: 268568d31a028514ebaaf6780aa4c9f6, type: 2}
       propertyPath: m_LocalScale.y
@@ -3371,7 +3371,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4500254741202306, guid: 268568d31a028514ebaaf6780aa4c9f6, type: 2}
       propertyPath: m_LocalScale.x
-      value: 0.0001
+      value: 1.640714
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 268568d31a028514ebaaf6780aa4c9f6, type: 2}
@@ -3439,10 +3439,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4868cdbbe832cec469001ea5e37cbda0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TargetAddr: 192.138.1.234
-  OutGoingPort: 9000
-  InComingPort: 8000
-  connectedToInternet: 0
 --- !u!4 &1138968770
 Transform:
   m_ObjectHideFlags: 0
