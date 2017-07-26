@@ -63,6 +63,8 @@ GameObject:
   - component: {fileID: 33347465303577386}
   - component: {fileID: 23783276150478748}
   - component: {fileID: 114815575134298240}
+  - component: {fileID: 114927635223972358}
+  - component: {fileID: 65432316689467418}
   m_Layer: 0
   m_Name: Procore Image
   m_TagString: Untagged
@@ -111,7 +113,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1920904217546678}
   m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
-  m_LocalPosition: {x: 0, y: -3.4, z: -2e-15}
+  m_LocalPosition: {x: 0, y: -3.4, z: 0}
   m_LocalScale: {x: 2.59, y: 4.77, z: 0.0001}
   m_Children: []
   m_Father: {fileID: 4498321703669924}
@@ -281,6 +283,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1815891864703648}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!65 &65432316689467418
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1920904217546678}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.99999994, y: 1, z: 81807.06}
+  m_Center: {x: 0, y: 0, z: 118.5012}
 --- !u!82 &82885357166517426
 AudioSource:
   m_ObjectHideFlags: 1
@@ -478,6 +492,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GazeMaterial: {fileID: 2100000, guid: f58d2b94119122844b39ddf622003c3a, type: 2}
   NormalMaterial: {fileID: 2100000, guid: f84f0a2f32121be43b3c2aa2ca054976, type: 2}
+--- !u!114 &114927635223972358
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1920904217546678}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a28770cf44f8944daed00f7c59d5009, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  images:
+  - {fileID: 2100000, guid: d3c84f808abce254fa1fe374648131de, type: 2}
+  - {fileID: 2100000, guid: 5ae59577923a628479f949d90d366a91, type: 2}
+  - {fileID: 2100000, guid: 9cfb0c15519b81949bffdc2d81940451, type: 2}
+  - {fileID: 2100000, guid: 769e3b582a77c954ebe2b1ef7cf26c57, type: 2}
+  - {fileID: 2100000, guid: cc17589c403bbe94a84a353b018b5c48, type: 2}
 --- !u!114 &114986353705121842
 MonoBehaviour:
   m_ObjectHideFlags: 1
