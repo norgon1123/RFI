@@ -466,6 +466,11 @@ Prefab:
       propertyPath: KeywordsAndResponses.Array.data[41].Response.m_PersistentCalls.m_Calls.Array.size
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114951691357224108, guid: 265a2095ad5a38d428c84b2d3aab8933,
+        type: 2}
+      propertyPath: KeywordsAndResponses.Array.data[42].Response.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4909711448167108, guid: 265a2095ad5a38d428c84b2d3aab8933, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -2150,6 +2155,47 @@ Prefab:
       value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
       objectReference: {fileID: 0}
+    - target: {fileID: 114951691357224108, guid: 265a2095ad5a38d428c84b2d3aab8933,
+        type: 2}
+      propertyPath: KeywordsAndResponses.Array.data[42].Keyword
+      value: Mute R F I
+      objectReference: {fileID: 0}
+    - target: {fileID: 114951691357224108, guid: 265a2095ad5a38d428c84b2d3aab8933,
+        type: 2}
+      propertyPath: KeywordsAndResponses.Array.data[42].Response.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 102715298}
+    - target: {fileID: 114951691357224108, guid: 265a2095ad5a38d428c84b2d3aab8933,
+        type: 2}
+      propertyPath: KeywordsAndResponses.Array.data[42].Response.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114951691357224108, guid: 265a2095ad5a38d428c84b2d3aab8933,
+        type: 2}
+      propertyPath: KeywordsAndResponses.Array.data[42].Response.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114951691357224108, guid: 265a2095ad5a38d428c84b2d3aab8933,
+        type: 2}
+      propertyPath: KeywordsAndResponses.Array.data[42].Response.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 114951691357224108, guid: 265a2095ad5a38d428c84b2d3aab8933,
+        type: 2}
+      propertyPath: KeywordsAndResponses.Array.data[42].Response.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: my chair
+      objectReference: {fileID: 0}
+    - target: {fileID: 114951691357224108, guid: 265a2095ad5a38d428c84b2d3aab8933,
+        type: 2}
+      propertyPath: KeywordsAndResponses.Array.data[42].Response.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114951691357224108, guid: 265a2095ad5a38d428c84b2d3aab8933,
+        type: 2}
+      propertyPath: KeywordsAndResponses.Array.data[42].Response.m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114599342607027872, guid: 265a2095ad5a38d428c84b2d3aab8933, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 265a2095ad5a38d428c84b2d3aab8933, type: 2}
@@ -2573,7 +2619,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400532, guid: b0da59ce3287f7c4e88ecf60065b8aab, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -1.729
       objectReference: {fileID: 0}
     - target: {fileID: 400532, guid: b0da59ce3287f7c4e88ecf60065b8aab, type: 3}
       propertyPath: m_LocalPosition.y
@@ -4399,6 +4445,30 @@ MonoBehaviour:
   PlaceParentOnTap: 0
   ParentGameObjectToPlace: {fileID: 2015472934}
   IsBeingPlaced: 0
+--- !u!65 &2015472937
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2015472934}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.41300917, y: 0.14946556, z: 1.159215}
+  m_Center: {x: 0.2934953, y: 0.0017647743, z: -0.9193919}
+--- !u!65 &2015472938
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2015472934}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.738432, y: 0.019424438, z: 0.43328166}
+  m_Center: {x: -0.15122044, y: 0.17768574, z: 0.0044289827}
 --- !u!1 &2029513430
 GameObject:
   m_ObjectHideFlags: 0
