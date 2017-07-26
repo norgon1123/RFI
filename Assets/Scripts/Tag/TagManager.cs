@@ -266,8 +266,6 @@ public class TagManager : MonoBehaviour, IInputClickHandler {
         GameObject tagDisplay = ShowTag(_tag);
         if (_tagName == "RFI")
         {
-            tagDisplay.GetComponent<TextToSpeechManager>().enabled = true;
-            tagDisplay.GetComponent<TextToSpeechOnGaze>().enabled = true;
             tagDisplay.GetComponent<ChangeName>().enabled = true;
         }
     }

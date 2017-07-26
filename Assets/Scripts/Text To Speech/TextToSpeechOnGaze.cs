@@ -9,17 +9,23 @@ using HoloToolkit.Unity;
 using System;
 using HoloToolkit.Unity.InputModule;
 
-public class TextToSpeechOnGaze : MonoBehaviour
+public class TextToSpeechOnGaze : MonoBehaviour, IInputClickHandler
 {
 	public TextToSpeechManager textToSpeechManager;
+
+    bool silentMode;
 
 	// Use this for initialization
 	void Start ()
 	{
+        silentMode = false;
 	}
 
 	public void GazeEntered()
 	{
+        if (silentMode)
+        { return; }
+
 		// Try and get a TTS Manager
 		TextToSpeechManager tts = GetComponent<TextToSpeechManager>();
 
@@ -44,4 +50,9 @@ public class TextToSpeechOnGaze : MonoBehaviour
 			return;
 		}
 	}
+
+    public void OnInputClicked(InputClickedEventData eventData)
+    {
+        silentMode = !silentMode;
+    }
 }
