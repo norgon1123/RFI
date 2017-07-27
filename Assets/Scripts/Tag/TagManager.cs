@@ -225,6 +225,7 @@ public class TagManager : MonoBehaviour, IInputClickHandler {
 		// Hold the positiong of the location to be tagged
 		Vector3 hitPos = GazeManager.Instance.HitPosition;
 		hitPos.y += 0.1f;
+        hitPos -= Camera.main.transform.forward * 0.2f;
 		TagLocation = hitPos;
 		GameObject _tag = Instantiate (Tag, TagLocation, transform.rotation);
 

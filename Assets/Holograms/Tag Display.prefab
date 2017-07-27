@@ -64,7 +64,7 @@ GameObject:
   - component: {fileID: 23783276150478748}
   - component: {fileID: 114815575134298240}
   - component: {fileID: 114927635223972358}
-  - component: {fileID: 65432316689467418}
+  - component: {fileID: 65081015776542000}
   m_Layer: 0
   m_Name: Procore Image
   m_TagString: Untagged
@@ -283,7 +283,7 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1815891864703648}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
---- !u!65 &65432316689467418
+--- !u!65 &65081015776542000
 BoxCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -293,8 +293,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.99999994, y: 1, z: 81807.06}
-  m_Center: {x: 0, y: 0, z: 118.5012}
+  m_Size: {x: 0.99999994, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!82 &82885357166517426
 AudioSource:
   m_ObjectHideFlags: 1
@@ -531,5 +531,5 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 3.3
-  m_Center: {x: 0, y: -1, z: 0}
+  m_Radius: 1
+  m_Center: {x: 0, y: 0, z: 0}
